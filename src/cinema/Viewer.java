@@ -14,7 +14,10 @@ public class Viewer {
     }
 
     public void setCinemaList(List<Cinema> cinemaList) {
-        this.cinemaList = cinemaList;
+        if (cinemaList != null) {
+            this.cinemaList = cinemaList;
+        }
+
     }
 
     public String getNikName() {
@@ -22,7 +25,9 @@ public class Viewer {
     }
 
     public void setNikName(String nikName) {
-        this.nikName = nikName;
+        if (nikName == null) {
+            this.nikName = nikName;
+        }
     }
 
     public int getAge() {
@@ -30,7 +35,10 @@ public class Viewer {
     }
 
     public void setAge(int age) {
-        this.age = age;
+        if (age > 0) {
+            this.age = age;
+        }
+
     }
 
     public int getCountFilms() {
@@ -39,6 +47,9 @@ public class Viewer {
     }
 
     public void setCountFilms(int countFilms) {
-        this.countFilms = countFilms;
+        if (countFilms > 0) {
+            this.countFilms = countFilms;
+        }
+
     }
 }
